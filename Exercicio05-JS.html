@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Mudar cor da página
+        </title>
+        <style>
+           body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                font-family: Arial, sans-serif;
+            }
+
+            .container {
+                text-align: center;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                background-color: #f9f9f9;
+            }
+
+            button {
+                margin: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            function MudaCor (cor){
+                document.body.style.backgroundColor = cor;
+            }
+        </script>
+    </head>
+    <body>
+        <div class ="conteiner">
+            <h2>Mudar cor de fundo</h2>
+            <p>Clique em um dos botões: </p>
+       
+            <button type="button" onclick="MudaCor('#8B0000')"> Fundo Vermelho </button>
+
+            <button type="button" onclick="MudaCor('#191970')"> Fundo Azul </button>
+
+             <button type="button" onclick="MudaCor('white')"> Fundo Branco </button>
+
+            <p id="fundo"></p>
+        
+        </div>
+
+    </body>
+</HTML>
