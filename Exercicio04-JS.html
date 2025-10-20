@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Tabuada
+        </title>
+        <script>
+            function ExibeTabuada (){
+                let valor = parseInt(document.getElementById("valor").value);
+                let resultado = "";
+
+                for (let i = 1; i <= 10; i++){
+                    resultado += `${valor} x ${i} = ${valor * i}<br>`;
+                }
+
+                document.getElementById("resultado").innerHTML = resultado;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Tabuada</h2>
+        <p>Digite um valor para exibir a tabuada dele: </p>
+         
+        <input type ="number" id ="valor">
+       
+        <button type="button" onclick="ExibeTabuada()"> Exibir </button>
+
+        <p id="resultado"></p>
+
+    </body>
+</HTML>
