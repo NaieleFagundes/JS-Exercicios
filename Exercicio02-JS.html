@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Verificador de obrigatoriedade de votação
+        </title>
+        <script>
+            function VotoFuncao (){
+                let idade = parseInt(document.getElementById("valor").value); 
+
+                if (idade >= 70 || (idade >= 16 && idade < 18)){
+                    document.getElementById("resultado").innerText = "Voto facultativo";
+                } else if (idade >= 18){
+                    document.getElementById("resultado").innerText = "Voto obrigatório";
+                } else {
+                    document.getElementById("resultado").innerText = "Voto não permitido";
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Verificador de obrigatoriedade de voto</h2>
+        <p>Digite sua idade: </p>
+         
+        <input type ="number" id ="valor">
+       
+        <button type="button" onclick="VotoFuncao()"> Verificar </button>
+
+        <p id="resultado"></p>
+
+    </body>
+</HTML>
